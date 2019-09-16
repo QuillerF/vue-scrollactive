@@ -186,7 +186,7 @@
 
     mounted() {
       const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-      console.log('lalalalallalalalalalalal')
+      console.warn('lalalalallalalalalalalal')
       if (!this.observer) {
         // Watch for DOM changes in the scrollactive element wrapper
         this.observer = new MutationObserver(this.initScrollactiveItems);
