@@ -186,7 +186,6 @@ export default {
 
   mounted() {
     const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-    console.warn('这只是测试版本');
     if (!this.observer) {
       // Watch for DOM changes in the scrollactive element wrapper
       this.observer = new MutationObserver(this.initScrollactiveItems);
@@ -431,7 +430,6 @@ export default {
     scrollToHashElement() {
       const { hash } = window.location;
       if (!hash) return;
-      console.warn(hash);
       const hashElement = document.getElementById(hash.substr(1));
       if (!hashElement) return;
 
