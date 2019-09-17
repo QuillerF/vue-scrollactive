@@ -186,7 +186,7 @@ export default {
 
   mounted() {
     const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
-    console.warn('lalalalallalalalalalalal');
+    console.warn('这只是测试版本');
     if (!this.observer) {
       // Watch for DOM changes in the scrollactive element wrapper
       this.observer = new MutationObserver(this.initScrollactiveItems);
@@ -259,7 +259,7 @@ export default {
           if (isScreenBeforeSectionEnd) currentItem = item;
         }
 
-        if (this.exact && isScreenPastSection && isScreenBeforeSectionEnd) currentItem = item;
+        if (this.exact && isScreenPastSection && isScreenBeforeSectionEnd) { currentItem = item; }
         if (!this.exact && isScreenPastSection) currentItem = item;
       });
 
@@ -431,8 +431,8 @@ export default {
     scrollToHashElement() {
       const { hash } = window.location;
       if (!hash) return;
-
-      const hashElement = document.querySelector(hash);
+      console.warn(hash);
+      const hashElement = document.getElementById(hash.substr(1));
       if (!hashElement) return;
 
       window.location.hash = ''; // Clears the hash to prevent scroll from jumping
