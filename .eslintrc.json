@@ -1,7 +1,9 @@
 {
   "root": true,
   "extends": "airbnb-base",
-  "plugins": ["html"],
+  "plugins": [
+    "html"
+  ],
   "env": {
     "browser": true
   },
